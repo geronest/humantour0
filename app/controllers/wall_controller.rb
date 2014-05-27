@@ -14,6 +14,7 @@ class WallController < ApplicationController
   end
 
   def show_detail
+    @post = Post.find(params[:id])
   end
 
   def write

@@ -1,7 +1,7 @@
 Humantour0::Application.routes.draw do
   root 'wall#show'
   get "/:category" => 'wall#show_category' 
-  get "wall/show_detail"
+  get "wall/show_detail/:id" => 'wall#show_detail'
   get "wall/write"
   get "wall/write_complete"
   get "wall/edit"

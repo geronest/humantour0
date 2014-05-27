@@ -4,6 +4,13 @@ class WallController < ApplicationController
   end
 
   def show_category
+    case params[:category]
+    when "tour"
+      @category = "tour"
+    when "interview"
+      @category = "interview"
+    end
+    @posts = Post.where(category: @category)
   end
 
   def show_detail

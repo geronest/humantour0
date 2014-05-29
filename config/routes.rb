@@ -4,8 +4,8 @@ Humantour0::Application.routes.draw do
   get "wall/show_detail/:id" => 'wall#show_detail'
   get "wall/write"
   post "wall/write_complete"
-  get "wall/edit"
-  get "wall/edit_complete"
+  get "wall/edit/:id" => 'wall#edit'
+  post "wall/edit_complete"
   get "wall/delete_complete"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

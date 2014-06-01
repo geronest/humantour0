@@ -2,7 +2,7 @@ Humantour0::Application.routes.draw do
   get "users/signup"
   post "users/signup_complete"
   get "users/login"
-  get "users/login_complete"
+  post "users/login_complete"
   get "users/logout_complete"
   root 'wall#show'
   get "/:category" => 'wall#show_category' 

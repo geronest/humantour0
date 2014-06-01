@@ -9,7 +9,7 @@
   <p><a href="/wall/edit/<%= @post.id %>">수정하기</a> | <a href="/wall/delete_complete/<%= @post.id %>">삭제</a></p>
   <hr>
   <% @post.comments.each do |comment| %>
-  <p><strong>아이디</strong> <%= comment.content %></p>
+  <p><strong>아이디</strong> <%= comment.content %> | <a href="/wall/delete_comment_complete/<%= comment.id %>">삭제</a></p>
   <% end %>
   <form action="/wall/write_comment_complete" method="post">
     <input type="hidden" name="post_id" value="<%= @post.id %>">

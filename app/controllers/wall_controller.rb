@@ -45,6 +45,13 @@ class WallController < ApplicationController
     flash[:alert] = "새 댓글을 달았습니다."
     redirect_to "/wall/show_detail/#{comment.post_id}"
   end
+  
+  def delete_comment_complete
+    comment = Comment.find(params[:id])
+    comment.destroy
+    flash[:alert] = "댓글이 삭제되었습니다."
+    redirect_to "/wall/show_detail/#{comment.post_id}"
+  end
 
   def edit
     @post = Post.find(params[:id])

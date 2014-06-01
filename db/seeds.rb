@@ -6,17 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-categories = ["tour", "interview"]
+  u = User.new
+  u.username = "charles"
+  u.password = "12345678"
+  u.email = "charles@gmail.com"
+  u.save
 
-categories.each do |category|
-  0.upto(1) do |i|
-    p = Post.new
-    p.user_id = i + 1
-    p.category = category
-    p.title = "#{category} #{i}"
-    p.content = "#{category} contents"
-    p.save
-  end
-end
-
-
+  u = User.new
+  u.username = "robert"
+  u.password = "87654321"
+  u.email = "robert@gmail.com"
+  u.save

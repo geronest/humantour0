@@ -1,4 +1,7 @@
 class WallController < ApplicationController
+
+  before_action :login_check
+  skip_before_action :login_check, :only => [:show, :show_category, :show_detail]
   def show
     @posts = Post.all
   end

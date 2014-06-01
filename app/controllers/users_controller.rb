@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def signup_complete
     user = User.new
     user.username = params[:username]
+    user.email = params[:email]
     if params[:password] == params[:retype_password]
       user.password = params[:password]
       if user.save
@@ -27,7 +28,7 @@ class UsersController < ApplicationController
   def login_complete
     user = User.where(username: params[:username])[0]
     if user.nil?
-      flash[:alert] = "존재하지 않는 아이디입니다."
+      flash[:alert] = "아이디 또는 비밀번호를 잘못 입력하셨습니다."
       redirect_to :back
     elsif user.password != params[:password]
       flash[:alert] = "아이디 또는 비밀번호를 잘못 입력하셨습니다."
@@ -40,5 +41,8 @@ class UsersController < ApplicationController
   end
 
   def logout_complete
+    reset_session
+    flash[:alert] = "성공적으로 로그아웃하였습니다."
+    redirect_to "/"
   end
 end

@@ -1,8 +1,25 @@
-<h4><a href="/">Humantour Stories</a> || <a href="/tour">Tours</a> | <a href="/interview">Interviews</a> | <a href="/wall/write">글쓰기</a> || 
-<% if session[:user_id].nil? %>
-<a href="/users/signup">회원가입</a> | <a href="/users/login">로그인</a>
-<% else %>
-<a href="/users/logout_complete">로그아웃</a>
-<% end %>
-</h4>
+<div class="container">
+  <h1 class="humantour0-title"><a class="humantour0-title-link" href="/">Humantour Stories</a></h1>
+</div>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="/tour">Tours</a></li>
+      <li><a href="/interview">Interviews</a></li>
+      <li><a href="/wall/write">글쓰기</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <%if session[:user_id].nil? %>
+      <li><a href="/users/signup">회원가입</a></li>
+      <li><a href="/users/login">로그인</a></li>
+      <% else %>
+      <li><a href="/users/logout_complete">로그아웃</a></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+
 

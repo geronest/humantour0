@@ -2,6 +2,18 @@ class UsersController < ApplicationController
   def signup
   end
 
+  def subscribe_complete
+    email = Email.new
+    email.email = params[:email]
+    if email.save
+      flash[:alert] = "구독신청이 되었습니다."
+      redirect_to "/"
+    else
+      flash[:alert] = email.errors.values.flatten.join(' ')
+      redirect_to "/"
+    end
+  end
+
   def signup_complete
     user = User.new
     user.username = params[:username]

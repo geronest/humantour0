@@ -1,7 +1,7 @@
 class WallController < ApplicationController
 
   before_action :login_check
-  skip_before_action :login_check, :only => [:show, :show_category, :show_detail]
+  skip_before_action :login_check, :only => [:show, :show_category, :show_detail, :about]
   def show
     @posts = Post.all
   end
@@ -24,7 +24,9 @@ class WallController < ApplicationController
   def write
     
   end
+  def about
 
+  end
   def write_complete
     post = Post.new
     post.user_id = session[:user_id]

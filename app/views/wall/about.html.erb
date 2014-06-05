@@ -1,0 +1,22 @@
+<div class="container">
+  <% if !flash[:alert].nil? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
+
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-3">
+    <p>휴먼투어는 멋지고 아름다운 사람들이 우리는 왜 이렇게 멋지고 아름다운지를 고뇌하기 위해 기나긴 여정을 떠나는 치열한 낭만주의자들의 모임입니당</p>
+    <p>Humantour is a group of romanticists leaving for a long long travel in which they are going to think about why they are so handsome and beautiful</p>
+  </div>
+  <div class="col-md-5">
+    <form action="/users/subscribe_complete" method="post">
+      <p><input class="form-input" type="text" name="email" placeholder="구독신청을 할 이메일을 입력하세요"></p>
+      <input class="btn btn-lg btn-block" type="submit" value="구독신청">
+    </form>
+  </div>
+  <div class="col-md-2">
+  </div>
+</div>

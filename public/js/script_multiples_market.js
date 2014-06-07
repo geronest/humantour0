@@ -186,12 +186,12 @@ $( function() {
 /*Replace the image path for the directory path where the new images are to be used, */
 
 	$.vegas( 'slideshow', {
-		delay: 8000,
+  //		delay: 8000,
 
 		backgrounds: [
-			{ src: 'https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/p417x417/1452224_439942732795011_1022601800_n.jpg', fade: 2000 },
-			{ src: 'https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash2/t31.0-8/1402032_752912758068340_1293764377_o.jpg', fade: 2000 },
-			{ src: 'https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10007516_554861577961143_1700722242008518369_n.jpg', fade: 2000 }
+			{ src: 'https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/p417x417/1452224_439942732795011_1022601800_n.jpg', },
+	//		{ src: 'https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash2/t31.0-8/1402032_752912758068340_1293764377_o.jpg', fade: 2000 },
+	//		{ src: 'https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10007516_554861577961143_1700722242008518369_n.jpg', fade: 2000 }
 		]
 	} );
 	

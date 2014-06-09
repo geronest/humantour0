@@ -470,6 +470,24 @@ section.about {
       width: 70%;
 }
 /*=====================*/
+/*==about section css===*/
+section.humantour {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.humantour h2 {
+    float: left;
+      font-size: 4em;
+        margin: 12px 0 0 0;
+}
+
+.humantour p {
+    float: right;
+      width: 70%;
+}
+/*=====================*/
+
 
 /*==service section css===*/
 section.service {
@@ -799,6 +817,20 @@ footer .iconSocial {
                                                                                 font-size: 1.1em;
                                                                                   }
                                                                                     
+                                       section.humantour {
+                                          background: #fff;
+                                          padding: 50px 0;
+                                        }
+                                        .humantour h2 {
+                                          float: left;
+                                          font-size: 3.2em;
+                                          margin: 5px 0 10px 0;
+                                      }
+                                                                  .humantour p {
+                                                                        float: left;
+                                                                            width: 100%;
+                                                                                font-size: 1.1em;
+                                                                                  }
                                                                                       /*==service section css===*/
                                                                                         
                                                                                           

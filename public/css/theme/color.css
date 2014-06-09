@@ -28,7 +28,18 @@ body{background: #cccccc;}
     .about h2 {
         color: #fff !important;
     }
+/*==about section css===*/
+    section.humantour {
+        background: #B3511A;
+    }
 
+    .humantour p {
+        color: #fff !important;
+    }
+
+    .humantour h2 {
+        color: #fff !important;
+    }
     /*==service section css===*/
     .service .iconFont {
         color: #EC6A2C;

@@ -19,10 +19,9 @@ window.onload = loadScript;
 $(document).ready(function() {  /*-- initiation document ready --*/
 	
 /*== page loading animation header ================================*/
-
 	$('body').jpreLoader({
 	}, function() {	  				
-		$('header').animate({ top: "0",opacity:".96" }, 1600 );		
+//		$('header').animate({ top: "0",opacity:".96" }, 1600 );		
 	    
 		});
 /*-----------------------------------------------------------------*/
@@ -186,12 +185,12 @@ $( function() {
 /*Replace the image path for the directory path where the new images are to be used, */
 
 	$.vegas( 'slideshow', {
-	//	delay: 8000,
+		delay: 8000,
 
 		backgrounds: [
-			{ src: 'https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/p417x417/1452224_439942732795011_1022601800_n.jpg', },
-	//		{ src: 'https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash2/t31.0-8/1402032_752912758068340_1293764377_o.jpg', fade: 2000 },
-	//		{ src: 'https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10007516_554861577961143_1700722242008518369_n.jpg', fade: 2000 }
+			{ src: '../img/bg1.jpg', fade: 2000 },
+			{ src: '../img/bg2.jpg', fade: 2000 },
+			{ src: '../img/bg3.jpg', fade: 2000 }
 		]
 	} );
 	
@@ -201,13 +200,11 @@ $( function() {
 	
 	
 /*== page scroller plugin settings ================================*/
-	
 	$('body').pageScroller({
 		HTML5mode: true,
 		scrollOffset: -20,
-		navigation: 'header'
+//		navigation: 'header'
 	});
-	
 /*-----------------------------------------------------------------*/
 
 	
@@ -215,7 +212,7 @@ $( function() {
 	
 /*== animation when performing scrolling header ===================*/
  	$(window).scroll(function (){ 
-		$(".cbp-af-header").addClass("cbp-af-header-shrink"); 
+//		$(".cbp-af-header").addClass("cbp-af-header-shrink"); 
 		$("#prev").addClass("visible");
 		
 		if(navigator.appVersion.indexOf("MSIE 8.")!=-1){
@@ -230,7 +227,7 @@ $( function() {
 			if(navigator.appVersion.indexOf("MSIE 8.")!=-1){
 				$("#prev").hide();	
 			}
-			$(".cbp-af-header").removeClass("cbp-af-header-shrink"); 
+//			$(".cbp-af-header").removeClass("cbp-af-header-shrink"); 
 		}
  	});
 /*-----------------------------------------------------------------*/	

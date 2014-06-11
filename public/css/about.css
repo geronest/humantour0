@@ -1,0 +1,82 @@
+/*==what section css===*/
+section.what {
+	padding: 80px 0;
+  background: #E3511A;
+  opacity: 0.3;
+}
+.what:hover{
+  opacity: 1;  
+}
+.what h2 {
+	float: left;
+	font-size: 4em;
+	margin: 12px 0 0 0;
+
+}
+
+.what h3 {
+	float: right;
+	font-size: 2em;
+	margin: 6px 0 0 0;
+}
+.what p {
+	float: right;
+	width: 70%;
+  color: #fff;
+}
+/*=====================*/
+
+/*==members section css===*/
+section.members {
+	padding: 80px 0;
+  background: #003D99;
+  opacity: 0.3;
+}
+.members:hover{
+  opacity: 1;
+}
+.members h2 {
+	float: left;
+	font-size: 4em;
+	margin: 12px 0 0 0;
+}
+
+.members h3 {
+	float: right;
+	font-size: 2em;
+	margin: 6px 0 0 0;
+}
+.members p {
+	float: right;
+	width: 70%;
+  color: #fff;
+}
+/*=====================*/
+
+/*==prime section css===*/
+section.prime {
+	padding: 80px 0;
+  background: #006600;
+  opacity: 0.3;
+}
+.prime:hover {
+  opacity: 1;
+}
+.prime h2 {
+	float: left;
+	font-size: 4em;
+	margin: 12px 0 0 0;
+}
+
+.prime h3 {
+	float: right;
+	font-size: 2em;
+	margin: 6px 0 0 0;
+}
+.prime p {
+	float: right;
+	width: 70%;
+  color: #fff;
+}
+/*=====================*/
+

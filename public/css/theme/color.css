@@ -1,86 +1,76 @@
-
 body{background: #cccccc;}
 .primary-color,.cbp-af-header.cbp-af-header-shrink .menu-list li.active a
-  {
-      color: #ec6a2c !important;
-  }
+	{
+	color: #ec6a2c !important;
+}
 
 
-  /*==header section css===*/
-  .cbp-af-header.cbp-af-header-shrink a,.cbp-af-header.cbp-af-header-shrink .separator
-    {
-        color: #222;
-    }
+/*==header section css===*/
+.cbp-af-header.cbp-af-header-shrink a,.cbp-af-header.cbp-af-header-shrink .separator
+	{
+	color: #222;
+}
 
-    .cbp-af-header.cbp-af-header-shrink { 
-        border-color: #e3511a !important;
-    }
-
-    /*==about section css===*/
-    section.about {
-        background: #E3511A;
-    }
-
-    .about p {
-        color: #fff !important;
-    }
-
-    .about h2 {
-        color: #fff !important;
-    }
+.cbp-af-header.cbp-af-header-shrink { 
+	border-color: #e3511a !important;
+}
 /*==about section css===*/
-    section.humantour {
-        background: #B3511A;
-    }
+section.about {
+	background: #E3511A;
+}
 
-    .humantour p {
-        color: #fff !important;
-    }
+.about p {
+	color: #fff !important;
+}
 
-    .humantour h2 {
-        color: #fff !important;
-    }
-    /*==service section css===*/
-    .service .iconFont {
-        color: #EC6A2C;
-    }
+.about h2 {
+	color: #fff !important;
+}
 
-    .feature p {
-        color: #555;
-    }
+/*==service section css===*/
+.service .iconFont {
+	color: #EC6A2C;
+}
 
-    /*==contact section css===*/
-    section.contact {
-        background: #f7f7f7;
-    }
+.feature p {
+	color: #555;
+}
 
-    .contact .iconFont {
-        color: #EC6A2C;
-    }
+/*==contact section css===*/
+section.contact {
+	background: #f7f7f7;
+  //background: #E3511A;
+}
 
-    .contact p {
-        color: #555;
-    }
+.contact .iconFont {
+	color: #EC6A2C;
+}
 
-    p.success {
-        color: #EC6A2C;
-    }
+.contact p {
+	color: #555;
+}
+
+p.success {
+	color: #EC6A2C;
+}
+
 
 #map-canvas{border-bottom: solid 1px #DDD; border-top: solid 1px #DDD;}
 /*==footer section css===*/
 footer {
-    color: #413b3a;
+	color: #413b3a;
 }
 
 footer .iconSocial a {
-    color: #413b3a;
+	color: #413b3a;
 }
 
 footer .iconSocial a:hover {
-    color: #4d4745 !important;
-      opacity:1 !important;
+	color: #4d4745 !important;
+	opacity:1 !important;
 }
 
 .button {
-    background: #E3511A;
+	background: #E3511A;
 }
+

@@ -5,7 +5,7 @@
     <nav>
         <ul class="menu-list">
           <li><a href="/">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/#contact">Contact</a></li>
           <li><a href="/wall/show">Interviews</a></li>
           <% if !session[:user_id].nil? %>
             <% u = User.find(session[:user_id]) %>

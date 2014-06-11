@@ -1,17 +1,16 @@
 <% @posts.reverse.each do |post| %>
-<div class="panel">
-  <div class="row panel-body">
-    <div class="col-md-3">
-    </div>
-    <div class="col-md-3 text-right">
+  <% if post.id % 3 == 0 %>
+  <section class="posts1">
+  <% elsif post.id % 3 == 1 %>
+  <section class="posts2">
+  <% elsif post.id % 3 == 2 %>
+  <section class="posts3">
+  <% end %>
+    <div class="row">
       <img class="img-rounded" src="<%= post.image_url(:thumb) %>">
-    </div>
-    <div class="col-md-6">
       <h4><a href="/wall/show_detail/<%= post.id %>"><%= post.title %></a> [<%= post.comments.count %>]</h4>
-      <p><span class="label label-warning"><%= post.category %></span></p>
+     <!-- <p><span class="label label-warning"><%= post.category %></span></p>-->
       <p><strong><%= post.user.username %></strong></p>
     </div>
-  </div>
-</div>
+  </section>
 <% end %>
-

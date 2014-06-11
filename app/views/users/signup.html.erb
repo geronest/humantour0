@@ -1,16 +1,17 @@
-<div class="container">
+<section class="toppart">  
+  <div class="row">
+  <br><br><br><br><br><br>
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
     <%= flash[:alert] %>
   </div>
   <% end %>
+  </div>
+</section>
 
+<section class="write" style="background: #CC3300;">
   <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4 text-center">
       <h3 class="form-heading">회원 가입하기</h3>
-
       <form action="/users/signup_complete" method="post">
         <p><input class="form-input" type="text" name="username" placeholder="아이디"></p>
         <p><input class="form-input" type="text" name="email" placeholder="이메일"></p>
@@ -18,12 +19,8 @@
         <p><input class="form-input" type="password" name="retype_password" placeholder="비밀번호 확인"></p>
         <input class="btn btn-lg btn-block" type="submit" value="가입">
       </form>
-    </div>
-    <div class="col-md-4">
-    </div>
   </div>
-</div>
-
+</section>
 
 
 

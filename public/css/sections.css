@@ -207,3 +207,57 @@ section.introduction {
   text-align: center;
 }
 
+section.post_detail {
+  padding: 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  opacity: 0.9;
+}
+
+.post_detail h2 {
+  color: #fff;
+  text-align: right;
+}
+.post_detail p {
+  color: #fff;
+}
+
+.post_detail h3 {
+  color: #fff;
+  text-align: right; 
+}
+.post_detail a, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+.post_detail a:hover {
+  opacity: 0.6;
+}
+
+section.write {
+  padding: 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  opacity: 0.9;
+}
+
+.write p {
+  color: #fff;
+}
+
+.write a, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.write a:hover {
+  opacity: 0.6;
+}
+
+.write h3 {
+  color: #fff;
+}

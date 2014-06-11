@@ -1,16 +1,17 @@
-<div class="container">
+<section class="toppart">
+  <div class="row">  
+  <br><br><br><br><br><br> 
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
     <%= flash[:alert] %>
   </div>
   <% end %>
+  </div>
+</section>
 
+<section class="write" style="background: #996633;">
   <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4 text-center">
       <h3 class="form-heading">게시글 수정하기</h3>
-
       <form action="/wall/edit_complete" method="post">
         <input type="hidden" name="id" value="<%= @post.id %>">
         <p>+ 분류
@@ -22,9 +23,5 @@
           <p><textarea class="form-textarea" name="post_content"><%= @post.content %></textarea></p>
           <input class="btn btn-lg btn-block" type="submit" value="수정하기">
       </form>
-    </div>
-    <div class="col-md-4">
-    </div>
   </div>
-</div>
-
+</section>

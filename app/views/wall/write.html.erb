@@ -1,16 +1,18 @@
-<div class="container">
+ <section class="toppart"> 
+  <div class="row">
+  <br><br><br><br><br><br>
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
     <%= flash[:alert] %>
   </div>
   <% end %>
+  </div>
+</section>
 
+
+<section class="write" style="background: #996633;">
   <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4 text-center">
       <h3 class="form-heading">글쓰기</h3>
-
       <form action="/wall/write_complete" method="post" enctype="multipart/form-data">
         <p>+ 분류
         <select name="post_category">
@@ -23,8 +25,5 @@
         <p><input type="file" name="image"></p>
         <input class="btn btn-lg btn-block"  type="submit" value="추가하기">
       </form>
-    </div>
-    <div class="col-md-4">
-    </div>
   </div>
-</div>
+</section>

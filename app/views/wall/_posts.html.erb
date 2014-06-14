@@ -1,9 +1,7 @@
 <% @posts.reverse.each do |post| %>
-  <% if post.id % 3 == 0 %>
+  <% if post.id % 2 == 1 %>
   <section class="posts1">
-  <% elsif post.id % 3 == 1 %>
-  <section class="posts2">
-  <% elsif post.id % 3 == 2 %>
+  <% elsif post.id % 2 == 0 %>
   <section class="posts3">
   <% end %>
     <div class="row">

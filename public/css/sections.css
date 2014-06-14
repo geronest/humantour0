@@ -1,7 +1,7 @@
 /*==what section css===*/
 section.what {
 	padding: 80px 0;
-  background: #E3511A;
+  background: #FF7519;
   opacity: 0.3;
 }
 .what:hover {
@@ -29,7 +29,7 @@ section.what {
 /*==members section css===*/
 section.members {
 	padding: 80px 0;
-  background: #003D99;
+  background: #FFA319;
   opacity: 0.3;
 }
 .members:hover {
@@ -56,7 +56,7 @@ section.members {
 /*==prime section css===*/
 section.prime {
 	padding: 80px 0;
-  background: #006600;
+  background: #75A319;
   opacity: 0.3;
 }
 .prime:hover {
@@ -85,8 +85,8 @@ section.posts1 {
   margin-right: auto;
   width: 50%;
   height: 200px;
-  background: #000099;
-  opacity: 0.3;
+  background: #CC6600;
+  opacity: 1;
 }
 
 .posts1:hover {
@@ -110,7 +110,7 @@ section.posts1 {
 .posts1 a, a:visited {
   text-decoration: none;
   cursor: pointer;
-  color: #fff;
+  color: #fff !important;
 }
 .posts1 a:hover {
   opacity: 0.6;
@@ -122,11 +122,11 @@ section.posts2 {
   margin-right: auto;
   width: 50%;
   height: 200px;
-  background: #FF6600;
+  background: #FF7519;
   opacity: 0.3;
 }
 .posts2:hover {
-  opacity: 1;
+  opacity: 0.9;
 }
 .posts2 img {
   padding: 10px;
@@ -159,8 +159,9 @@ section.posts3 {
   margin-right: auto;
   width: 50%;
   height: 200px;
-  background: #007A00;
-  opacity: 0.3;
+  background: #F5E0CC;
+  //background: #F0D1B2;
+  opacity: 1;
 }
 
 .posts3:hover {
@@ -174,17 +175,19 @@ section.posts3 {
 
 .posts3 p {
   text-align: right; 
-  color: #fff;
+  color: #000;
 }
-
+.posts3 strong{
+  color: #000;
+}
 .posts3 h4 {
-  color: #fff;
+  color: #000000;
   text-align: right; 
 }
 .posts3 a, a:visited {
   text-decoration: none;
   cursor: pointer;
-  color: #fff;
+  color: #000000 !important;
 }
 .posts3 a:hover {
   opacity: 0.6;

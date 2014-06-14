@@ -4,20 +4,22 @@
 
     <nav>
         <ul class="menu-list">
-          <li><a href="/">About</a></li>
-          <li><a href="/#contact">Contact</a></li>
-          <li><a href="/wall/show">Interviews</a></li>
+          <li><a href="http://54.238.223.164:3000/#what">What is</a></li>
+          <li><a href="http://54.238.223.164:3000/#prime">Who is</a></li>
+          <li><a href="http://54.238.223.164:3000/#members">About US</a></li>
+          <li><a href="http://54.238.223.164:3000/#contact">Contact</a></li>
+          <li><a href="http://54.238.223.164:3000/wall/show">Interviews</a></li>
           <% if !session[:user_id].nil? %>
             <% u = User.find(session[:user_id]) %>
             <% if u.usertype == 1 || u.usertype == 2 %>
-              <li><a href="/wall/write">글쓰기</a></li>
+              <li><a href="http://54.238.223.164:3000/wall/write">글쓰기</a></li>
             <% end %>
           <% end %>
           <%if session[:user_id].nil? %>
-            <li><a href="/users/signup">Join</a></li>
-            <li><a href="/users/login">Login</a></li>
+            <li><a href="http://54.238.223.164:3000/users/signup">Join</a></li>
+            <li><a href="http://54.238.223.164:3000/users/login">Login</a></li>
           <% else %>
-            <li><a href="/users/logout_complete">Logout</a></li>
+            <li><a href="http://54.238.223.164:3000/users/logout_complete">Logout</a></li>
           <% end %>
         </ul>
     </nav>

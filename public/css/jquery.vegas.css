@@ -1,7 +1,7 @@
 .vegas-loading {
 	/* Loading Gif by http://preloaders.net/ */
-	-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
-	background: url(../img/load.gif) no-repeat center center;
+//	-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+//	background: url(../img/load.gif) no-repeat center center;
 	/*background:rgba(255, 255, 255, 0.3) url(../img/load.gif) no-repeat center center;*/
 	height:14px;
 	left:16px;

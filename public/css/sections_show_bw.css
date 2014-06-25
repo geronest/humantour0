@@ -1,0 +1,49 @@
+section.introduction {
+  padding: 20px 0;
+  background: #FFFFFF;
+  opacity: 1;
+}
+
+.introduction p {
+  text-align: center;
+  color: #000;
+}
+
+.introduction h3 {
+  text-align: center;
+  color: #000;
+}
+
+div.interview_card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 250px;
+  background: #fff;
+  padding: 5px;
+  margin: 20px 10px 0 10px;
+}
+
+.interview_card p{
+  text-align: right;
+  color: #000;
+}
+
+.interview_card strong {
+  color: #000;
+}
+
+.interview_card h4 {
+  color: #000;
+  text-align: center;
+}
+
+.interview_card a.link_post, a.link_post:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+.interview_card a:hover {
+  opacity: 0.6;
+}

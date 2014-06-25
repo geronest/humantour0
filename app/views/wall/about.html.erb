@@ -1,16 +1,31 @@
+<link rel="stylesheet" href="/css/sections_about_bw.css">
+<section class="margin">
+  <div class="row">
+  <p style="margin-bottom:120px;"></p>
+  </div>
+</section>
 <section class="toppart">
   <div class="row">
-    <br><br><br><br><br><br><br><br>
     <% if !flash[:alert].nil? %>
     <div class="alert alert-danger">
-      <%= flash[:alert] %>
+      <p style="text-align: center;"> <%= flash[:alert] %></p>
     </div>
     <% end %>
   </div>
 </section>
+
+<!--<section class="email" style="padding: 80px 0; background: #009933;">-->
+<section class="email">
+  <div class="row">
+    <form action="/users/subscribe_complete" method="post">
+      <p><input class="form-input" type="text" style="display: block; margin-left: auto; margin-right: auto; width: 50%; text-align: center; height:15px;" name="email" placeholder="인터뷰 구독신청을 할 이메일을 입력하세요"></p>
+      <p style="text-align: center;"><input class="btn btn-lg btn-block" type="submit" value="구독신청" style="width: 100px; border: 5px solid #ccc; -webkit-border-radius: 10px; border-radius: 10px;"></p>
+    </form>
+  </div>
+</section>
     <a name="what"></a>
 <section class="what">
-  <div class="row">
+  <div class="row" id="what">
     <h2>What is<br> HUMAN TOUR?</h2>
     <h3>HUMAN TOUR는 세상을 향한 의미 있는 '질문'을 찾습니다</h3>
     <p>  'HUMAN TOUR(부제 : 당신에게 묻습니다)'는 세상과 인식의 지평을 넓힌 이들로 불리는 혁신적인 인물을 찾아가, 각 인물에게서 세상을 향한 의미 있는 '질문'을 담아오는 인터뷰 프로젝트입니다.</p>
@@ -23,7 +38,7 @@
   </div>
 </section>
     <a name="prime"></a>
-<section class="prime">
+<section class="prime" id="prime">
   <div class="row">
     <h2>Who is<br>Prime Mover?</h2>
     <h3>Prime Mover, 세상의 지평을 넓힌 사람들을 만나러 갑니다.</h3>
@@ -48,7 +63,7 @@
   </div>
 </section>
     <a name="members"></a>
-<section class="members">
+<section class="members" id="members">
   <div class="row">
     <h2>About Team<br>& Members</h2>
     <h3>HUMAN TOUR와 함께 하는 '치열한 낭만주의자' 4인</h3><br>
@@ -71,17 +86,9 @@
   <div class="row">
     <a name="contact"></a>
     <h2>CONTACT</h2>
-    <p>이메일 : human_tour@humantour.com</p>
-    <p>홈페이지 : http://www.humantour.org</p>
+    <p>이메일 : contact@humantour.org</p>
+    <p>홈페이지 : http://www.humantour.org:3000</p>
   </div>
 </section>
 <!--
-<section class="service">
-  <div class="row">
-  <form action="/users/subscribe_complete" method="post">
-    <p><input class="form-input" type="text" name="email" placeholder="구독신청을 할 이메일을 입력하세요">
-    <input class="btn btn-lg btn-block" type="submit" value="구독신청"></p>
-  </form>
-  </div>
-</section>
 -->

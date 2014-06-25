@@ -206,7 +206,7 @@ $( function() {
 	$('body').pageScroller({
 		HTML5mode: true,
 		scrollOffset: -20,
-//		navigation: 'header'
+		//navigation: 'header'
 	});
 /*-----------------------------------------------------------------*/
 

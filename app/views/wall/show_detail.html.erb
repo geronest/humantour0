@@ -1,37 +1,46 @@
+<link rel="stylesheet" href="/css/sections_show_detail_bw.css"> 
+<section class="margin">
+  <div class="row">
+    <p style="margin-bottom:120px;"></p>
+  </div>
+</section>
  <section class="toppart"> 
   <div class="row">
-  <br><br><br><br><br><br>
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
-    <%= flash[:alert] %>
+  <p style="text-align: center;">  <%= flash[:alert] %></p>
   </div>
   <% end %>
   </div>
 </section>
 
-<% if @post.id % 3 == 0 %>
-<section class="post_detail" style="background: #000099">
-<% elsif @post.id % 3 == 1 %>
-<section class="post_detail" style="background: #FF6600">
-<% elsif @post.id % 3 == 2 %>
-<section class="post_detail" style="background: #007A00">
-<% end %>
-  <h2>Stories</h2>
-  <div class="row">
-      <img class="img-rounded" src="<%= @post.image_url(:medium) %>" align="right">
+<section class="post_detail">
+  <h2 >Stories</h2>
+  <div class="row" style="text-align: center;">
+      <img class="img-rounded" src="<%= @post.image_url(:medium) %>">
   </div>
   <div class="row">
-      <h3>+ <%= @post.title %></h3>
-      <p><%= @post.content %></p>
-      <p><a href="/wall/edit/<%= @post.id %>">수정</a> | <a href="/wall/delete_complete/<%= @post.id %>">삭제</a> || <a href="/">전체 리스트 가기</a></p>
+      <h3 style="text-align: center;">+ <%= @post.title %></h3>
+      <p><%= @post.content.html_safe %></p>
       <hr />
+      <% if !session[:user_id].nil? %>
+      <% u = User.find(session[:user_id]) %>
+      <% if u.usertype == 1 || u.usertype == 2 %>
+      <p><a href="/wall/edit/<%= @post.id %>">수정</a> | <a href="/wall/delete_complete/<%= @post.id %>">삭제</a> || <a href="/wall/send/<%= @post.id %>">글 뿌리기</a> | <a href="/wall/show">전체 리스트 가기</a></p>
+      <% else %>
+      <p><a href="/wall/edit/<%= @post.id %>">수정</a> | <a href="/wall/delete_complete/<%= @post.id %>">삭제</a> || <a href="/">전체 리스트 가기</a></p>
+      <% end %>
+      <% else %>
+      <p><a href="/wall/show">전체 리스트 가기</a></p>
+      <% end %>
       <% @post.comments.each do |comment| %>
       <p><strong><%= comment.user.username %></strong> <%= comment.content %> | <a href="/wall/delete_comment_complete/<%= comment.id %>">삭제</a></p>
       <% end %>
       <form class="text-left" action="/wall/write_comment_complete" method="post">
         <input type="hidden" name="post_id" value="<%= @post.id %>">
+        <p style="margin-bottom: 10px;"></p>
         <% if !@comment_writer.nil? %>
-        <p><strong><%= @comment_writer.username %></strong> <input type="text" name="comment_content" placeholder="댓글 내용을 입력하세요."> <input type="submit" value="달기"></p>
+        <p><strong><%= @comment_writer.username %></strong> <input type="text" name="comment_content" placeholder="댓글 내용을 입력하세요." style="width: 400px; height: 10px;"> <input type="submit" value="댓글달기" style="width: 100px; border: 5px solid #ccc; -webkit-border-radius: 10px; border-radius: 10px;"></p>
         <% end %>
       </form>
   </div>

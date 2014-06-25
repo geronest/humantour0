@@ -1,0 +1,25 @@
+section.write {
+  padding: 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  opacity: 0.9;
+}
+
+.write p {
+  color: #fff;
+}
+
+.write a, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.write a:hover {
+  opacity: 0.6;
+}
+
+.write h3 {
+  color: #fff;
+}

@@ -1,9 +1,15 @@
+<link rel="stylesheet" href="/css/sections_write.css"> 
+<section class="margin">
+  <div class="row">
+    <p style="margin-bottom:120px;"></p>
+  </div>
+</section>
+
  <section class="toppart"> 
   <div class="row">
-  <br><br><br><br><br><br>
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
-    <%= flash[:alert] %>
+  <p style="text-align: center;">  <%= flash[:alert] %></p>
   </div>
   <% end %>
   </div>
@@ -22,8 +28,8 @@
         <p><input class="form-input" type="text" name="post_title" placeholder="제목을 입력하세요."></p>
         <p><textarea class="form-textarea" name="post_content" placeholder="내용을 입력하세요."></textarea></p>
         <p>+ 사진 업로드</p>
-        <p><input type="file" name="image"></p>
-        <input class="btn btn-lg btn-block"  type="submit" value="추가하기">
+        <p><input type="file" name="image" style="width: 300px; border: 5px solid #ccc; -webkit-border-radius: 10px; border-radius: 10px; "></p>
+        <input class="btn btn-lg btn-block"  type="submit" value="추가하기" style="width: 100px; border: 5px solid #ccc; -webkit-border-radius: 10px; border-radius: 10px;">
       </form>
   </div>
 </section>

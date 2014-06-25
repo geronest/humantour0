@@ -1,14 +1,27 @@
+<div class="container" style="width: 100%; height: auto; text-align: center;">
+ <div class="content" style="margin: 0 auto; width: 1000px; height: auto; text-align: left; padding: 0 0 0 50px;">
 <% @posts.reverse.each do |post| %>
-  <% if post.id % 2 == 1 %>
-  <section class="posts1">
-  <% elsif post.id % 2 == 0 %>
-  <section class="posts3">
-  <% end %>
-    <div class="row">
-      <img class="img-rounded" src="<%= post.image_url(:thumb) %>">
-      <h4><a href="/wall/show_detail/<%= post.id %>"><%= post.title %></a> [<%= post.comments.count %>]</h4>
+    <div class="interview_card">
+      <div class="card_image" style="width: 200px; height: 150px; display: table-cell; vertical-align: middle; text-align: center;">
+        <% if post.image_url(:thumb).nil? %>
+          <a href="/wall/show_detail/<%= post.id %>" style="text-align: center;">
+          <img src="https://lh5.googleusercontent.com/Fy3vZUxC80sIRHB5ET3eVTajncdcpadDYPY0lc_5SbI=w590-h207-p-no" style="width: 180px; height: auto;">
+          </a>
+        <% else %>
+          <a href="/wall/show_detail/<%= post.id %>" style="text-align: center;">
+          <img class="img-rounded" src="<%= post.image_url(:thumb) %>" style="width: 180px; height: 130px;">
+          </a>
+        <% end %>
+      </div>
+      <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+      <h4><a class="link_post"  href="/wall/show_detail/<%= post.id %>" style="width: 180px;"><%= post.title %></a></h4>
      <!-- <p><span class="label label-warning"><%= post.category %></span></p>-->
+      </div>
+      <h4> [<%= post.comments.count %>]</h4>
+      <div > 
       <p><strong><%= post.user.username %></strong></p>
+      </div>
     </div>
-  </section>
 <% end %>
+ </div>
+</div>

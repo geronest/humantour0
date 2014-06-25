@@ -1,24 +1,29 @@
+<section class="margin">
+  <div class="row">
+    <p style="margin-bottom: 120px;"></p>
+  </div>
+</section>
  <section class="toppart"> 
    <div class="row"> 
-   <br><br><br><br><br><br>
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
-    <%= flash[:alert] %>
+  <p style="text-align: center;">  <%= flash[:alert] %></p>
   </div>
   <% end %>
   </div>
 </section>
 
-<section class="write" style="background: #CC3300;">
-  <div class="row">
-      <h3 class="form-heading">로그인하기</h3>
+<section class="write">
+  <div class="row" style="text-align: center;">
+      <h3 class="form-heading">Login</h3>
       <form action="/users/login_complete" method="post">
-        <p><input class="form-input" type="text" name="username" placeholder="아이디"></p>
-        <p><input class="form-input" type="password" name="password" placeholder="비밀번호"></p>
-        <input class="btn btn-lg btn-block" type="submit" value="로그인">
+        <p><input class="form-input" type="text" name="username" placeholder="아이디" style="height: 15px; width: 300px;"></p>
+        <p><input class="form-input" type="password" name="password" placeholder="비밀번호" style="height: 15px; width: 300px;"></p>
+        <input class="btn btn-lg btn-block" type="submit" value="로그인" style="width: 100px; border: 5px solid #ccc; -webkit-border-radius: 10px; border-radius: 10px;">
       </form>
   </div>
 </section>
+
 
 
 

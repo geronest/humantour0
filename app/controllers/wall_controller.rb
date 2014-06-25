@@ -90,10 +90,14 @@ class WallController < ApplicationController
       flash[:alert] = post.errors.values.flatten.join(' ')
       redirect_to :back
     end
-
-
   end
-
+  
+ # def send
+ #   post = Post.find(params[:id])
+ #   UserMailer.send_interview(post)
+ #   flash[:alert] = "글 뿌렸습니다."
+    #redirect_to :back
+ # end
   def delete_complete
     post = Post.find(params[:id])
     if post.user_id == session[:user_id]

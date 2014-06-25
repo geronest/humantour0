@@ -1,9 +1,15 @@
+<link rel="stylesheet" href="/css/sections_show_bw.css">
+<link rel="stylesheet" href="/css/post_bw.css">
+<section class="margin">
+  <div class="row">
+   <p style="margin-bottom:120px;"></p>
+  </div>
+</section>
 <section class="toppart">
   <div class="row">
-    <br><br><br><br><br><br>
     <% if !flash[:alert].nil? %>
     <div class="alert alert-danger">
-      <%= flash[:alert] %>
+    <p style="text-align: center;"><%= flash[:alert] %></p>
     </div>
     <% end %>
   </div>
@@ -14,4 +20,6 @@
     <p>회원가입을 하신 후 함께 이야기 나누실 수 있습니다.</p>
   </div>
 </section>
+
 <%= render :partial => "wall/posts" %>
+</div>

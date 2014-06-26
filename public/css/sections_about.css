@@ -47,13 +47,11 @@ section.members {
 	float: right;
 	font-size: 2em;
 	margin: 6px 0 0 0;
-  font: Helvetica, sans-serif;
 }
 .members p {
 	float: right;
 	width: 70%;
   color: #fff;
-  font: Helvetica, sans-serif;
 }
 /*=====================*/
 
@@ -74,13 +72,11 @@ section.prime {
 	float: right;
 	font-size: 2em;
 	margin: 6px 0 0 0;
-  font: Helvetica, sans-serif;
 }
 .prime p {
 	float: right;
 	width: 70%;
   color: #fff;
-  font: Helvetica, sans-serif;
 }
 /*=====================*/
 
@@ -93,7 +89,6 @@ section.contact {
   font-size: 4em;
   margin: 12px 0 0 0;
   color: #000;
-  font: Helvetica, sans-serif;
 }
 
 .contact .iconFont {
@@ -102,7 +97,6 @@ section.contact {
 
 .contact p {
   color: #555;
-  font: Helvetica, sans-serif;
 }
 
 p.success {

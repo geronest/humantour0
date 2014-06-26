@@ -13,6 +13,7 @@ div.interview_card {
 
 .interview_card p {
   text-align: right;
+  padding: 0 10px 0 0;
   color: #000;
 }
 .interview_card strong{

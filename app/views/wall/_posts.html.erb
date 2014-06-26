@@ -14,12 +14,12 @@
         <% end %>
       </div>
       <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-      <h4><a class="link_post"  href="/wall/show_detail/<%= post.id %>" style="width: 180px;"><%= post.title %></a></h4>
+      <h4><a class="link_post"  href="/wall/show_detail/<%= post.id %>" style="width: 180px; font-family: 'Nanum Gothic', sans-serif;"><%= post.title %></a></h4>
      <!-- <p><span class="label label-warning"><%= post.category %></span></p>-->
       </div>
       <h4> [<%= post.comments.count %>]</h4>
       <div > 
-      <p><strong><%= post.user.username %></strong></p>
+      <p style="font-family: 'Raleway';"><%= post.user.username %></p>
       </div>
     </div>
 <% end %>

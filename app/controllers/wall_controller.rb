@@ -92,12 +92,15 @@ class WallController < ApplicationController
     end
   end
   
- # def send
- #   post = Post.find(params[:id])
- #   UserMailer.send_interview(post)
- #   flash[:alert] = "글 뿌렸습니다."
-    #redirect_to :back
- # end
+  def send_complete
+    @post = Post.find(params[:id])
+    Email.find_each do |em|
+      UserMailer.send_interview(em, @post).deliver
+    end
+    flash[:alert] = "글 뿌렸습니다."
+    redirect_to :back
+  end
+
   def delete_complete
     post = Post.find(params[:id])
     if post.user_id == session[:user_id]

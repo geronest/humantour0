@@ -26,7 +26,7 @@
       <% if !session[:user_id].nil? %>
       <% u = User.find(session[:user_id]) %>
       <% if u.usertype == 1 || u.usertype == 2 %>
-      <p><a href="/wall/edit/<%= @post.id %>">수정</a> | <a href="/wall/delete_complete/<%= @post.id %>">삭제</a> || <a href="/wall/send/<%= @post.id %>">글 뿌리기</a> | <a href="/wall/show">전체 리스트 가기</a></p>
+      <p><a href="/wall/edit/<%= @post.id %>">수정</a> | <a href="/wall/delete_complete/<%= @post.id %>">삭제</a> || <a href="/wall/send_complete/<%= @post.id %>">글 뿌리기</a> | <a href="/wall/show">전체 리스트 가기</a></p>
       <% else %>
       <p><a href="/wall/edit/<%= @post.id %>">수정</a> | <a href="/wall/delete_complete/<%= @post.id %>">삭제</a> || <a href="/">전체 리스트 가기</a></p>
       <% end %>

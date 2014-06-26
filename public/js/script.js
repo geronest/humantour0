@@ -17,18 +17,7 @@ window.onload = loadScript;
 
 
 $(document).ready(function() {  /*-- initiation document ready --*/
-	
-/*== page loading animation header ================================*/
-	$('body').jpreLoader({
-	}, function() {	  				
-//		$('header').animate({ top: "0",opacity:".96" }, 1600 );		
-	    
-		});
-/*-----------------------------------------------------------------*/
-	
-	
-
-	
+   prompt("너 이거 보이냐");	
 /*== Submit Contact Form ==========================================*/  	
 	
 	//if submit button is clicked
@@ -178,65 +167,17 @@ $( function() {
 /*-----------------------------------------------------------------*/	
 	
 
-	
-	
-/*== vega plugin settings =========================================*/
-/*Change background images.*/
-/*Replace the image path for the directory path where the new images are to be used, */
 
-	$.vegas( 'slideshow', {
-		delay: 8000,
-
-		backgrounds: [
-			{ src: '../img/bg2.jpg', fade: 2000 },
-			{ src: '../img/bg3.jpg', fade: 2000 },
-			{ src: '../img/bg4.jpg', fade: 2000 },
-			{ src: '../img/bg5.jpg', fade: 2000 },
-			{ src: '../img/bg6.jpg', fade: 2000 },
-			{ src: '../img/bg7.jpg', fade: 2000 }
-		]
-	} );
-	
-/*-----------------------------------------------------------------*/
-
-	
 	
 	
 /*== page scroller plugin settings ================================*/
 	$('body').pageScroller({
 		HTML5mode: true,
 		scrollOffset: -20,
-		//navigation: 'header'
+		navigation: '#navi3'
 	});
 /*-----------------------------------------------------------------*/
 
-	
-	
-	
-/*== animation when performing scrolling header ===================*/
- 	$(window).scroll(function (){ 
-//		$(".cbp-af-header").addClass("cbp-af-header-shrink"); 
-		$("#prev").addClass("visible");
-		
-		if(navigator.appVersion.indexOf("MSIE 8.")!=-1){
-			$("#prev").show();	
-		}
-		
-
-		var pos = $(window).scrollTop();
-		
-		if (pos == 0) {
-			$("#prev").removeClass("visible");
-			if(navigator.appVersion.indexOf("MSIE 8.")!=-1){
-				$("#prev").hide();	
-			}
-//			$(".cbp-af-header").removeClass("cbp-af-header-shrink"); 
-		}
- 	});
-/*-----------------------------------------------------------------*/	
-
- 	
- 	
 	
 /*== Count Down settings ==========================================*/
  /*
@@ -270,56 +211,5 @@ $('#prev').click(function () {
 });
 
 /*---------------------------------------------------------------
-
-		
-/*== Google Maps settings =========================================*/
-/*
- * define the coordinates of your company
- */
-
-lat = 49.14584;
-lng = -122.886557; 
-
-var map;
-var MY_MAPTYPE_ID = 'custom_style';
- 
-function initialize() {
-
-   var featureOpts = [
-	                   {"featureType": "landscape","stylers":[{ "weight": 0.1 },{ "color": "#f0f0f0" }]},
-	                   {"featureType": "road","elementType": "geometry","stylers":[{"visibility": "simplified"},{"color": "#ffffff"}]},
-	                   {"featureType": "poi","elementType": "geometry","stylers": [{"color": "#ededec" }]},
-	                   {"featureType": "road","elementType": "labels.text.fill","stylers": [{"color":"#888888" }]},
-	                   {"featureType": "poi","elementType": "labels.text.fill","stylers":[{"color":"#999999"}]},
-	                   {"featureType": "road","elementType": "labels.text.stroke","stylers":[{"color":"#ffffff"}]},
-	                   {"featureType": "water","stylers":[{"color": "#dddddd"}]}
-	                  ];
-	  	 
-
-  
-  var myLatlng = new google.maps.LatLng(lat,lng);
-  var mapOptions = {
-    zoom: 12,
-    scrollwheel: false,
-    mapTypeControl:false,
-    streetViewControl:false,
-    center: myLatlng,
-    mapTypeControlOptions: {mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]},
-    mapTypeId: MY_MAPTYPE_ID
-  };
-    
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  var marker = new google.maps.Marker({position:myLatlng,icon:"img/mark.png",map: map});
-  var styledMapOptions ={name: 'Custom Style'};
-  var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions); 
-  map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
-}
-
-//google.maps.event.addDomListener(window, 'load', initialize);
-
-/*-----------------------------------------------------------------*/
-
-
-
 
 

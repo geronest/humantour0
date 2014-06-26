@@ -1,15 +1,14 @@
 class UserMailer < ActionMailer::Base
   default from: "contact@humantour.org"
 
-  def welcome_email(email)
-    @email = email 
-    mail(to: @user.email, subject: 'Successfully subscribed to humantour.org!')
+  def welcome_email(user)
+    @user = user 
+    mail(to: @user.email, subject: 'Successfully signed into humantour.org!')
   end
   
-  def send_interview(post)
+  def send_interview(email, post)
+    @em = email 
     @post = post 
-    Email.each do |email|
-      mail(to: |email|.email, subject:'Humantour Interviews: ' + @post.title) 
-    end
+    mail(to: @em.email, subject:'Humantour Interview: ' + @post.title) 
   end
 end

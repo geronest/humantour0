@@ -15,16 +15,17 @@ class UsersController < ApplicationController
   end
 
   def signup_complete
-    user = User.new
-    user.username = params[:username]
-    user.email = params[:email]
+    @user = User.new
+    @user.username = params[:username]
+    @user.email = params[:email]
     if params[:password] == params[:retype_password]
-      user.password = params[:password]
-      if user.save
+      @user.password = params[:password]
+      if @user.save
           flash[:alert] = "성공적으로 가입되었습니다."
+        #  UserMailer.welcome_email(@user).deliver
           redirect_to "/"
       else
-        flash[:alert] = user.errors.values.flatten.join(' ')
+        flash[:alert] = @user.errors.values.flatten.join(' ')
         redirect_to :back
       end
     else

@@ -1,9 +1,28 @@
 <link rel="stylesheet" href="/css/sections_about_bw.css">
 <section class="margin">
   <div class="row">
-  <p style="margin-bottom:120px;"></p>
+  <p style="margin-bottom:75px;"></p>
   </div>
 </section>
+<header style="height: 40px;">
+<div class="row">
+  <div class="sub-row">
+    <nav>
+      <ul class="menu-list">
+      <div id="navi3" style="display: inline-block;">
+        <li><a href="#what">What is</a></li>
+        <li><a href="#prime">Who is</a></li>
+        <li><a href="#members">About US</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </div>
+      </ul>
+    </nav>
+  </div>
+</div>
+</header>
+<div class="row" id="what">
+<p style="margin-top: 80px;"></p>
+</div>
 <section class="toppart">
   <div class="row">
     <% if !flash[:alert].nil? %>
@@ -14,16 +33,6 @@
   </div>
 </section>
 
-<!--<section class="email" style="padding: 80px 0; background: #009933;">-->
-<section class="email">
-  <div class="row" id="what"></div>
-  <div class="row">
-    <form action="/users/subscribe_complete" method="post">
-      <p><input class="form-input" type="text" style="display: block; margin-left: auto; margin-right: auto; width: 50%; text-align: center; height:15px;" name="email" placeholder="인터뷰 구독신청을 할 이메일을 입력하세요"></p>
-      <p style="text-align: center;"><input class="btn btn-lg btn-block" type="submit" value="구독신청" style="width: 100px; border: 5px solid #ccc; -webkit-border-radius: 10px; border-radius: 10px;"></p>
-    </form>
-  </div>
-</section>
 <section class="what">
   <div class="row">
     <h2>What is<br> HUMAN TOUR?</h2>

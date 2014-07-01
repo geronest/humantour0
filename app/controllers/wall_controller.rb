@@ -1,7 +1,7 @@
 class WallController < ApplicationController
 
   before_action :login_check
-  skip_before_action :login_check, :only => [:show, :show_category, :show_detail, :about, :about2]
+  skip_before_action :login_check, :only => [ :intro, :show, :show_category, :show_detail, :about, :about2]
   def show
     @posts = Post.all
   end
@@ -28,6 +28,10 @@ class WallController < ApplicationController
     
   end
   def about
+
+  end
+
+  def intro
 
   end
   def write_complete

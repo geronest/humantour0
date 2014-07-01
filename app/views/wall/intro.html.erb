@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/sections_about_bw.css">
+<section class="margin">
+  <div class="row">
+  <p style="margin-bottom:120px;"></p>
+  </div>
+</section>
+<section class="toppart">
+  <div class="row">
+    <% if !flash[:alert].nil? %>
+    <div class="alert alert-danger">
+      <p style="text-align: center;"> <%= flash[:alert] %></p>
+    </div>
+    <% end %>
+  </div>
+</section>
+<section class="email" style="background: url('http://wallpoper.com/images/00/44/78/36/tiger-black-and-white_00447836.jpg') center center no-repeat; height: 600px;">
+  <div class="row">
+    <p style="margin-bottom: 200px;"></p>
+    <form action="/users/subscribe_complete" method="post">
+      <p> <input class="form-input" type="text" style="display: block; margin-left: auto; margin-right: auto; width: 50%; text-align: center; height: 15px; font-family: 'Raleway';" name="email" placeholder="인터뷰 구독신청을 할 이메일을 입력하세요"></p>
+      <p style = "text-align: center;"><input class="btn btn-lg btn-block" type="submit" value="구독신청" style="width: 100px; border: 5px solid #ccc; -webkit-border-radius: 10px; border-radius: 10px;"></p>
+    </form>
+  </div>
+</section>

@@ -14,9 +14,10 @@ Humantour0::Application.routes.draw do
   get "wall/delete_complete/:id" => 'wall#delete_complete'
   post "wall/write_comment_complete"
   get "wall/delete_comment_complete/:id" => 'wall#delete_comment_complete'
-  root 'wall#about'
+  get "wall/about" => 'wall#about'
   post "users/subscribe_complete"
   get "wall/send_complete/:id" => 'wall#send_complete'
+  root 'wall#intro'
  # get "user_mailer/send_interview/:id" => 'user_mailer#send_interview'
 
   # The priority is based upon order of creation: first created -> highest priority.

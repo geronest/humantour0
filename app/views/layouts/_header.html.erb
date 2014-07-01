@@ -1,9 +1,10 @@
 <header class="primary-border-color fadeInDown">
 <div class="row">
   <div class="sub-row">
-    <a href="/"><img src="https://lh5.googleusercontent.com/-IJKfIVd76xQ/U6fh15HNd8I/AAAAAAAACEg/vl3UhJM_LU4/w506-h281/title_toppart3.jpg"></a>
+    <a href="/"><img src="https://lh5.googleusercontent.com/-IJKfIVd76xQ/U6fh15HNd8I/AAAAAAAACEg/vl3UhJM_LU4/w506-h281/title_toppart3.jpg" style="height: 50px;"></a>
     <nav>
         <ul id="navi" class="menu-list">
+        <!--
         <div id="navi3" style="display: inline-block;">
           <p style="margin-bottom:40px;"></p>
           <li><a href="/#what">What is</a></li>
@@ -11,9 +12,12 @@
           <li><a href="/#members">About US</a></li>
           <li><a href="/#contact">Contact</a></li>
         </div>
+       -->
        <!-- </ul>
         <ul class="menu-list2">-->
+        <p style="margin-bottom: 30px;"></p>
         <div id="navi4" style="display: inline-block;">
+          <li><a href="/wall/about">Info</a></li>
           <li><a href="http://54.238.223.164:3000/wall/show">Interviews</a></li>
           <% if !session[:user_id].nil? %>
             <% u = User.find(session[:user_id]) %>

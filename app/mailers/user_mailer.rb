@@ -11,4 +11,10 @@ class UserMailer < ActionMailer::Base
     @post = post 
     mail(to: @em.email, subject:'Humantour Interview: ' + @post.title) 
   end
+
+  def send_feedback(email, name, msg)
+    @msg = msg
+    mail(to: "contact@humantour.org", :from => email,  subject: '[HT feedback]from ' + name)
+  end
+
 end

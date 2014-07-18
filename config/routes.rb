@@ -11,12 +11,15 @@ Humantour0::Application.routes.draw do
   post "wall/write_complete"
   get "wall/edit/:id" => 'wall#edit'
   post "wall/edit_complete"
+  post "wall/feedback"
   get "wall/delete_complete/:id" => 'wall#delete_complete'
   post "wall/write_comment_complete"
   get "wall/delete_comment_complete/:id" => 'wall#delete_comment_complete'
   get "wall/about" => 'wall#about'
   post "users/subscribe_complete"
   get "wall/send_complete/:id" => 'wall#send_complete'
+  get "wall/team"
+  get "wall/contact"
   root 'wall#intro'
  # get "user_mailer/send_interview/:id" => 'user_mailer#send_interview'
 

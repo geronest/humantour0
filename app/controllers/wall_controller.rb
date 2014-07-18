@@ -1,7 +1,7 @@
 class WallController < ApplicationController
 
   before_action :login_check
-  skip_before_action :login_check, :only => [ :intro, :show, :show_category, :show_detail, :about, :about2]
+  skip_before_action :login_check, :only => [ :intro, :show, :show_category, :show_detail, :about, :contact, :team, :feedback]
   def show
     @posts = Post.all
   end
@@ -34,6 +34,13 @@ class WallController < ApplicationController
   def intro
 
   end
+
+  def contact
+  end
+  def team
+  end
+
+
   def write_complete
     post = Post.new
     post.user_id = session[:user_id]
@@ -102,6 +109,15 @@ class WallController < ApplicationController
       UserMailer.send_interview(em, @post).deliver
     end
     flash[:alert] = "글 뿌렸습니다."
+    redirect_to :back
+  end
+  
+  def feedback
+    email = params[:email]
+    name = params[:name]
+    msg = params[:comment]
+    UserMailer.send_feedback(email, name, msg).deliver
+    flash[:alert] = "피드백이 전달되었습니다."
     redirect_to :back
   end
 

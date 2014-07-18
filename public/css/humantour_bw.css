@@ -312,8 +312,9 @@ header .logo {
 
 header .text-logo{
 	font-size: 2.3em;
-    line-height: 52px;
-    width: 211px;}
+  line-height: 52px;
+  width: 211px;
+}
 
 header .logo span {
 	font-size: 0.8em;
@@ -332,19 +333,27 @@ header .sub-row {
 
 .menu-list li {
 	float: left;
+  list-style: none;
 	margin: 0 0 0 20px;
 	font-size: 1.4em;
 	font-weight: normal;
 }
 
-.social-list {
-	float: left;
-	margin-left: 10px;
+ul#navi ul {
+  display: none;
+  position: absolute;
 }
 
-.social-list li {
-	float: left;
-	margin-right: 6px;
+ul#navi li:hover ul {
+  display: block;
+}
+
+
+
+ul#navi li li {
+  float: none;
+  font-family: 'Raleway';
+  font-size: 1em;
 }
 
 input[type="submit"] { -webkit-appearance:none; -webkit-border-radius:2px !important; }

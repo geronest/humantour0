@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/css/sections_about_bw.css">
+<section class="margin">
+  <div class="row">
+  <p style="margin-bottom:75px;"></p>
+  </div>
+</section>
+<section class="toppart">
+  <div class="row">
+    <% if !flash[:alert].nil? %>
+    <div class="alert alert-danger">
+      <p style="text-align: center;"> <%= flash[:alert] %></p>
+    </div>
+    <% end %>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="row">
+    <div class="cont-send">
+      <p class="success">Your message was sent successfully.</p>
+    </div>
+
+    <form action="/wall/feedback" method="post" enctype="multipart/form-data" id="form-contact">
+      <span class="name-input-cont">
+        <label for="name">Your name:</label>
+        <input type="text" id="name" name="name" class="required">
+      </span>
+
+      <span class="email-input-cont">
+        <label for="email">Email address:</label>
+        <input type="text" id="email" name="email" class="required email">
+      </span>
+     
+
+     <span class="message-cont">
+        <label for="comment">Message:</label>
+        <textarea id="comment" class="required" name="comment"></textarea>
+     </span>
+      <input type="submit" class="button" value="SEND MESSAGE" id="submit_contact_form" style="float: right;">
+      </form>
+  </div>
+</section>
+<!--
+<script type="text/javascript">
+  $('#submit_contact_form').click(function () {
+    if($("#form-contact").valid()) {
+      var name = $("#name").val();
+      var email = $("#email").val();
+      var comment = $("#comment").val();
+      var data = 'name=' + name + '&email=' + email + '&comment=' + encodeURIComponent(comment);
+
+      $('.load-form').toggle();
+      $('#submit_contact_form:submit').attr("disabled",true);
+      $('.success').hide();
+
+      $.ajax({
+        url: "/php/process_contact_form.php",
+        type: "POST",
+        data: data,
+        cache: false,
+        success: function(html) {
+          $('.load-form').toggle();
+          $('#form-contact')[0].reset();
+          $('.success').toggle('slow');
+          $('#submit_contact_form:submit').attr("disabled",false);
+        }
+      });
+      return false;
+    }
+  });
+</script>
+-->

@@ -1,7 +1,7 @@
 <header class="primary-border-color fadeInDown">
 <div class="row">
   <div class="sub-row">
-    <a href="/"><img src="https://lh5.googleusercontent.com/-IJKfIVd76xQ/U6fh15HNd8I/AAAAAAAACEg/vl3UhJM_LU4/w506-h281/title_toppart3.jpg" style="height: 50px;"></a>
+    <a href="/"><img src="https://lh5.googleusercontent.com/-IJKfIVd76xQ/U6fh15HNd8I/AAAAAAAACEg/vl3UhJM_LU4/w506-h281/title_toppart3.jpg" style="height: 70px;"></a>
     <nav>
         <ul id="navi" class="menu-list">
         <!--
@@ -17,8 +17,15 @@
         <ul class="menu-list2">-->
         <p style="margin-bottom: 30px;"></p>
         <div id="navi4" style="display: inline-block;">
-          <li><a href="/wall/about">Info</a></li>
+          <li><a href="/wall/about">About</a>
+            <ul>
+              <li><a href="/wall/about#what">HUMAN TOUR</a></li>
+              <li><a href="/wall/about#prime">Prime Mover</a></li>
+            </ul>
+          </li>
           <li><a href="http://54.238.223.164:3000/wall/show">Interviews</a></li>
+          <li><a href="/wall/team">Team</a></li>
+          <li><a href="/wall/contact">Contact</a></li>
           <% if !session[:user_id].nil? %>
             <% u = User.find(session[:user_id]) %>
             <% if u.usertype == 1 || u.usertype == 2 %>
